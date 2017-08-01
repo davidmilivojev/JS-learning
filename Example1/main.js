@@ -22,11 +22,7 @@ var wtr = document.getElementById('demo');
 
 wtr.addEventListener('click', style);
 function style(){
-  wtr.setAttribute('class', 'styler' );
+  wtr.setAttribute('class', 'btn-style' );
 }
 
-// wtr.addEventListener('mouseover', styleChange);
-//
-// function styleChange(){
-//   wtr.setAttribute('style', 'margin: 0 auto; font-size: 20px; width: 300px; height: 100px; color: white; background: green; border: 1px solid red;text-align: center;');
-// }
+
