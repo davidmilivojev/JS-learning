@@ -47,11 +47,12 @@ var cat = new Cats('Felix', 'Persian');
 
 var show = document.getElementById('btn-show');
 var animalsContent = document.getElementById('animals-type');
+var chk = document.getElementById('chkBox');
 
 show.addEventListener('click', showAnimals);
 
 function showAnimals(){
-  if(  animalsContent.style.visibility == 'hidden'){
+  if(  animalsContent.style.visibility == 'hidden' && chk.checked == true){
        animalsContent.style.visibility = 'visible';
   }else{
        animalsContent.style.visibility = 'hidden';
@@ -121,6 +122,10 @@ function openMenu(){
        mobContent.style.display = 'none';
   }
 }
+
+
+
+
 
 
 var user = document.getElementById('username');
