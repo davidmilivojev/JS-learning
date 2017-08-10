@@ -6,12 +6,35 @@ var newItem = document.getElementById('item');
 add.addEventListener('click', insertItem);
 remove.addEventListener('click', deleteItem);
 
+//var i = 0;
 //var gen = document.getElementsByTagName('p');
 function insertItem(){
   var tableCell = document.createElement('p');
   tableCell.innerHTML = newItem.value;
+  localStorage.setItem('newNew', newItem.value);
+  //localStorage.setItem('newNew' + i, newItem.value);
+  //i++;
   newItem.value = "";
   table.appendChild(tableCell);
+
+}
+
+
+addEventListener('load', loadingCells);
+function loadingCells(){
+
+ var storageKey = localStorage.getItem('newNew');
+
+  console.log(storageKey);
+
+  if(storageKey != null){
+    var newTable = document.createElement('p');
+    newTable.innerHTML = storageKey;
+    table.appendChild(newTable);
+  }else{
+    console.log('no data');
+  }
+
 
 }
 
@@ -23,7 +46,7 @@ function deleteItem() {
     for(var i = 0; i < table.length; i++) {
         if(table[i].innerHTML.toLowerCase() == tableCell.toLowerCase()) {
         document.getElementById("table-list").removeChild(table[i]);
-
+        //localStorage.removeItem('newNew');
         }
       }
 }

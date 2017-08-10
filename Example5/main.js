@@ -45,3 +45,13 @@ function myFunc(){
    window.location.assign('index.html');
    }
 }
+
+var dataChecker = setTimeout(dataCheck, 1000);
+function dataCheck(){
+  if(localStorage.getItem('userName') == 'david'){
+    localStorage.removeItem('userName');
+    localStorage.removeItem('userPass');
+  }else{
+    console.log('no data');
+  }
+}
