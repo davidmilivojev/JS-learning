@@ -109,3 +109,27 @@ console.log(JSON.stringify(stringObj));
 
 var res = JSON.parse(localStorage.getItem('dav'));
 console.log(res);
+
+
+
+//keycode
+
+
+var txtArea = document.getElementById('text-area');
+var contTxtArea = document.getElementById('content-txt-area');
+var infoText = document.getElementById('info-description');
+txtArea.addEventListener('scroll', scrolling);
+
+function scrolling() {
+    var y = txtArea.scrollTop;
+    var x = txtArea.scrollHeight;
+    var z = txtArea.clientHeight;
+    if(x - y === z){
+      contTxtArea.style.background = 'black';
+      infoText.innerHTML = 'Thanks for reading';
+      infoText.style.color = 'green';
+    }else{
+      contTxtArea.style.background = 'grey';
+    }
+    document.getElementById ('y-value').innerHTML =  'Vertically:' + y +'px';
+}

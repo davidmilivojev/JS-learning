@@ -301,6 +301,52 @@ iframe{
 	margin-bottom: 20px;
 }
 
+#gallery{
+	width: 100%;
+	max-width: 500px;
+	margin: 50px auto;
+	border: 2px solid white;
+	border-radius: 50px;
+}
+
+#current{
+	width: 90%;
+	max-width: 500px;
+	border: 3px solid black;
+	margin: 15px auto;
+	border-radius: 50px;
+}
+
+.thumb{
+	width: 70px;
+	height: 70px;
+	margin: 10px 5px;
+	border: 1px solid grey;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.photos{
+	text-align: center;
+}
+
+#text-area {
+    height: 200px;
+    overflow: auto;
+		border: 2px solid white;
+
+}
+
+#content-txt-area {
+    max-height: 500px;
+    background-color: grey;
+}
+
+#info-description{
+	border: 2px solid white;
+	border-radius: 50px;
+	background: black;
+}
 
 
 
