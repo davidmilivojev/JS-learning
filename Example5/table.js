@@ -6,47 +6,43 @@ var newItem = document.getElementById('item');
 add.addEventListener('click', insertItem);
 remove.addEventListener('click', deleteItem);
 
-//var i = 0;
-//var gen = document.getElementsByTagName('p');
+var itemz = [];
+
 function insertItem(){
   var tableCell = document.createElement('p');
   tableCell.innerHTML = newItem.value;
-  localStorage.setItem('newNew', newItem.value);
-  //localStorage.setItem('newNew' + i, newItem.value);
-  //i++;
+  itemz.push(newItem.value);
+  localStorage.setItem("newTableItem", JSON.stringify(itemz));
   newItem.value = "";
   table.appendChild(tableCell);
-
 }
 
+var retrievedData = localStorage.getItem("newTableItem");
+var itemzParsed = JSON.parse(retrievedData);
 
 addEventListener('load', loadingCells);
 function loadingCells(){
 
- var storageKey = localStorage.getItem('newNew');
-
-  console.log(storageKey);
-
-  if(storageKey != null){
+for(var i=0; i < itemzParsed.length; i++){
+  if(itemzParsed != null){
     var newTable = document.createElement('p');
-    newTable.innerHTML = storageKey;
+    newTable.innerHTML = itemzParsed[i];
     table.appendChild(newTable);
-  }else{
-    console.log('no data');
   }
-
+}
 
 }
 
 function deleteItem() {
     var tableCell = newItem.value;
-    var table = document.querySelectorAll('p');
+    var tableItem = document.querySelectorAll('p');
     newItem.value = "";
 
-    for(var i = 0; i < table.length; i++) {
-        if(table[i].innerHTML.toLowerCase() == tableCell.toLowerCase()) {
-        document.getElementById("table-list").removeChild(table[i]);
-        //localStorage.removeItem('newNew');
+    for(var i = 0; i < tableItem.length; i++) {
+        if(tableItem[i].innerHTML.toLowerCase() == tableCell.toLowerCase()) {
+        table.removeChild(tableItem[i]);
+        //var rem = JSON.parse(localStorage["newTableItem"]);
+
         }
       }
 }
