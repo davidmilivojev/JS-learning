@@ -23,15 +23,11 @@ var itemzParsed = JSON.parse(retrievedData);
 addEventListener('load', loadingCells);
 function loadingCells(){
 
-for(var i=0; i < itemzParsed.length; i++){
-  if(itemzParsed != null){
-    var newTable = document.createElement('p');
-    newTable.innerHTML = itemzParsed[i];
-    table.appendChild(newTable);
+  for(var i=0; itemzParsed != null &&  i < itemzParsed.length ; i++){
+      var newTable = document.createElement('p');
+      newTable.innerHTML = itemzParsed[i];
+      table.appendChild(newTable);
   }
-}
-
-}
 
 function deleteItem() {
     var tableCell = newItem.value;
