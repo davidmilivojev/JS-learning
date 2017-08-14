@@ -28,6 +28,7 @@ function loadingCells(){
       newTable.innerHTML = itemzParsed[i];
       table.appendChild(newTable);
   }
+}
 
 function deleteItem() {
     var tableCell = newItem.value;
