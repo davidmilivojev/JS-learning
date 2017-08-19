@@ -17,8 +17,9 @@ function semaphore(){
 
   var semTimerYellow = setTimeout(changeToYellow, 1000);
   var semTimerGreen = setTimeout(changeToGreen, 3000);
-  var start = setInterval(semaphore, 6000);
+
 
 }
 
 semaphore();
+var start = setInterval(semaphore, 6000);

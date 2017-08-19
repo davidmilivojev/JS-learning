@@ -18,14 +18,14 @@ function insertItem(){
 }
 
 var retrievedData = localStorage.getItem("newTableItem");
-var itemzParsed = JSON.parse(retrievedData);
+var itemz = JSON.parse(retrievedData);
 
 addEventListener('load', loadingCells);
 function loadingCells(){
 
-  for(var i=0; itemzParsed != null &&  i < itemzParsed.length ; i++){
+  for(var i=0; itemz != null &&  i < itemz.length ; i++){
       var newTable = document.createElement('p');
-      newTable.innerHTML = itemzParsed[i];
+      newTable.innerHTML = itemz[i];
       table.appendChild(newTable);
   }
 }
