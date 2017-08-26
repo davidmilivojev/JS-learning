@@ -1,0 +1,41 @@
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background: #00cc66;
+
+}
+
+
+.logo{
+    height: 50px;
+    width: 50px;
+    margin: 15px 10px;
+    float: left;
+}
+
+.menu{
+    float: right; 
+    padding-top: 15px; 
+}
+
+.menu li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    padding: 10px;
+    margin-right: 10px;
+    color: rgb(118, 74, 188);
+    font-family: Arial;
+    font-weight: bold;
+    border: 1px solid rgb(118, 74, 188);    
+}
+
+
+
